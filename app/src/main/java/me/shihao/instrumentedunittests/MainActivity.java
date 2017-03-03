@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText edt2;
     private Button btn;
     private TextView tv;
-    private Button btnWebView;
+    private Button btnWebView, btnRecycleView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnRecycleView = (Button) findViewById(R.id.button4);
+        btnRecycleView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RecycleviewActivity.class);
                 startActivity(intent);
             }
         });
